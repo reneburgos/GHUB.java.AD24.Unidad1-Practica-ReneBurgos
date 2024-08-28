@@ -52,7 +52,7 @@ public class Rational
         this.r[0] = a;
     }
 
-    public void setNumerador(int b)
+    public void setDenominadorador(int b)
     {
         this.r[1] = b;
     }
