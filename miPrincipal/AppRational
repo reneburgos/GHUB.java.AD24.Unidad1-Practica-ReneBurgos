@@ -1,0 +1,26 @@
+package miPrincipal;
+import java.util.Scanner;
+public class AppRational
+{
+    public static void menu()
+    {
+        System.out.println("========================================");
+        System.out.println("   OPERACIONES CON NUMEROS RACIONALES   ");
+        System.out.println("========================================");
+        Scanner consola = new Scanner(System.in);
+        Rational r1 = new Rational(a:5,b:3);
+        Rational r2 = new Rational(a:4,b:3);
+        Rational r3 = new Rational();
+        r3 = r1.add(r1,r2);
+
+        System.out.println("Resultado de la suma: "+r3);
+
+        Rational r4 = new Rational();
+        r4 = r1.mult(r1, r2);
+        System.out.println("Resultado de la multiplicacion es: "+r4);
+
+        rational r5 = new Rational(a:7, b:3);
+        System.out.println("Resultado de la comparacion de "
+                            +r3+" y "+r5+" es: "+r5.equal(r3,r5));
+    }
+}

@@ -15,10 +15,10 @@ public class Rational
     this.r[1] = b;
     }
 
-    public Rational (add Rational a, Rational b)
+    public Rational add(Rational a, Rational b)
     {
         Rational x = new Rational();
-        x.setNumerador(a.getNumerador()*b.getDenominador()+a.getDenominador()*b.getNumerador());
+        x.setNumerador((a.getDenominador()*b.getNumerador())+(a.getDenominador()*b.getNumerador()));
         x.setDenominador(a.getDenominador()*b.getDenominador());
         return x;
     }
@@ -33,8 +33,7 @@ public class Rational
 
     public boolean equal(Rational a, Rational b)
     {
-        return (a.getNumerador()*b.getDenominador()
-        == b.getNumerador()a.getDenominador());
+        return (a.getNumerador()*b.getDenominador() == b.getNumerador()*a.getNumerador());
     }
 
     public int getNumerador()
