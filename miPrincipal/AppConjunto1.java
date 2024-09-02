@@ -1,6 +1,6 @@
 package miPrincipal;
 import java.util.Scanner;
-public class AppConjunto
+public class AppConjunto1
 {
     public static void menu()
     {
