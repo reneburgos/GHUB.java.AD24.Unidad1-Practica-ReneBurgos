@@ -1,48 +1,75 @@
 package miPrincipal;
+
 import java.util.Scanner;
-import org.junit.jupiter.engine.script.ScripAccessor;
-public class Principal
-{
-    public static void main(String[] args) 
-    {  // System.out.println(new Principal().getGreeting());
+
+import org.junit.jupiter.engine.script.ScriptAccessor;
+
+public class Principal {
+    public String getGreeting() {
+        return "Hola Mundo!";
+    }
+
+    public static void main(String[] args) throws Exception {
+        //System.out.println(new Principal().getGreeting());
         Scanner consola = new Scanner(System.in);
-        int opc = 0;
-        do
-        {
-        System.out.println(x:"========================================");
-        System.out.println(x:"        TIPOS DE DATOS ABSTRACTOS       ");
-        System.out.println(x:"========================================");
-        System.out.println(x:" 1) Rational");
-        System.out.println(x:" 2) Matriz");
-        System.out.println(x:" 3) Cadena");
-        System.out.println(x:" 4) Numerote");
-        System.out.println(x:" 5) Conjunto");
-        System.err.println();
-        System.out.println(x:" 0) Salir");
-        System.out.print(s:"Selecciona una opcion ");
-        opc = consola.nextInt();
+        int opc =0;
+        do{
+            System.out.println("***********************************");
+            System.out.println("    TIPOS DE DATOS ABSTRACTOS");
+            System.out.println("***********************************");
+            System.out.println(" 1) Rational");
+            System.out.println(" 2) Matriz");
+            System.out.println(" 3) Cadena");
+            System.out.println(" 4) Numerote");
+            System.out.println(" 5) Conjunto");
+            System.out.println(" 6) ");
+            System.out.println(" 7)");
+            System.out.println(" 8) ");
+            System.out.println(" 9) Punto");
+            System.out.println("10) Triangulo");
+            System.out.println("11) Poligono");
+            System.err.println();
+            System.out.println(" 0) Salir");
+            System.out.print("selecciona opción ");
+            opc = consola.nextInt();
+            switch (opc) {
+                case 1:  
+                   AppRational.menu();
+                    break;
 
-        switch (opc)
-        {
-            case 1:
-                AppRational.menu();
-                break;
-            case 2:
-            case 3:
-            case 4: 
-            case 5:
-                AppConjunto.menu();
-                break;
-            case 0:
-                System.out.println(x:"Hasta luego:");
-                break;
-            default:
-                System.out.println(x:"Valor incorrecto, intentalo de nuevo");
-        }
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                   AppConjunto.menu();
+                   break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                   AppPunto.menu();
+                   break;
+                case 10:
+                   AppTriangulo.menu();
+                   break;
+                case 11:
+                
+                case 0:
+                    System.out.println("Hasta luego!");
+                    break;
+            
+                default:
+                   System.out.println("Valor incorrecto, intenta de nuevo");
+                
+            }
+
+        } while (opc !=0);
 
 
-        }while(opc !=0);
+    
+        
+        
 
-       
+        
     }
 }

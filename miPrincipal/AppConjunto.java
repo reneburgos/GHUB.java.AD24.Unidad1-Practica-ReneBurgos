@@ -1,28 +1,60 @@
 package miPrincipal;
-public class AppConjunto 
-{
-    package miPrincipal;
+
 import java.util.Scanner;
-public class AppConjunto
-{
-    public static void menu()
-    {
-        System.out.println("===========================");
-        System.out.println("   OPERACIONES CON PUNTO   ");
-        System.out.println("===========================");
 
-        Punto p1 = new Punto(x:2, y:1);
-        Punto p2 = new Punto(x:2, y:3);
-        Punto p3 = new Punto(x:4, y:1);
+public class AppConjunto {
+    public static void menu(){
+        System.out.println("=======================================");
+        System.out.println("      OPERACIONES CON CONJUNTOS");
+        System.out.println("=======================================");
+        Scanner consola = new Scanner(System.in);
+        Conjunto A = new Conjunto();
+        if(A.esVacio())
+            System.out.println("El conjunto esta vacio");
+        
+        else
+           System.out.println("El comjunto No esta vacio");
 
-        System.out.println("Valor de x en punto1: "+p1.getX());
-        System.out.println("Valor de y en punto1: "+p1.gety());
+        //añadir elementos al conjunto
+        Integer ele = 4;
+        A.añadir(ele);
+        ele = 7;
+        A.añadir(ele);
+        ele =2;
+        A.añadir(ele);
+        ele =5;
+        A.añadir(ele);
+        System.out.println("El conjunto A tiene "+A.getCardinal()+" elementos");
+        ele = 4;
+        A.añadir(ele);
+        System.out.println("El conjunto A tiene "+A.getCardinal()+" elementos");
+        //creamos otro conjunto
+        Conjunto B = new Conjunto();
+        ele = 6;
+        B.añadir(ele);
+        ele=3;
+        B.añadir(ele);
+        B.añadir(4);
+        B.añadir(10);
+        System.out.println("El conjunto B tiene "+B.getCardinal()+" elementos");
+        B.retirar(10);
+        System.out.println("El conjunto B tiene "+B.getCardinal()+" elementos");
 
-        System.out.println("Valor de x en punto2: "+p2.getX());
-        System.out.println("Valor de y en punto2: "+p2.getY());
+        Conjunto C=A.union(B);
+        System.out.println("El conjunto C tiene "+C.getCardinal()+" elementos");
+        System.out.println(C.toString());
 
-        System.out.println("Valor de x en punto3: "+p3.getX());
-        System.out.println("Valor de y en punto: "+p3.getY());
-    }
-}
+
+
+
+        
+
+
+        
+
+
+
+
+
+    }  
 }
